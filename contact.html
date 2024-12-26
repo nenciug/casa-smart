@@ -10,67 +10,90 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: black; /* Culoare text negru */
+            color: black;
         }
+
         header {
             text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 0;
-            position: relative;
-            width: 100%;
-            height: 250px;
         }
-        header .logo {
+
+        header .logo-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        header .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         header .slogan {
             position: absolute;
             bottom: 20px;
-            width: 100%;
-            font-size: 1.5em;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding: 5px;
         }
+
         nav {
-            background-color: #333; /* Fundal negru */
-            position: sticky; /* Meniu fix în partea de sus */
+            background-color: #444;
+            position: sticky;
             top: 0;
-            z-index: 1000; /* Asigurăm că meniul rămâne deasupra altor elemente */
-            padding: 10px 0;
+            z-index: 1000;
         }
+
         nav ul {
             list-style-type: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Permite împachetarea pe dispozitive mici */
+            flex-wrap: wrap;
         }
+
         nav ul li {
-            margin: 5px;
+            margin: 0;
         }
+
         nav ul li a {
-            color: white; /* Text alb */
+            display: block;
+            padding: 15px 20px;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: #00B4CC; /* Fundal albastru deschis */
-            transition: background-color 0.3s, color 0.3s;
-            display: block; /* Pentru o dimensiune consistentă pe mobil */
+            color: white;
+            font-size: 1em;
             text-align: center;
         }
+
         nav ul li a:hover {
-            background-color: #006F7F; /* Fundal albastru închis */
-            color: white; /* Text alb */
+            background-color: #555;
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            header .slogan {
+                font-size: 1em;
+            }
+        }
+
         section {
             padding: 20px;
-            margin-top: 20px; /* Asigură spațiu sub meniu */
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -80,63 +103,37 @@
             width: 100%;
             margin-top: 40px;
         }
+
         footer p {
             font-size: 0.9em;
             margin: 5px 0;
         }
+
         footer a {
             color: #f4f4f4;
             text-decoration: none;
         }
+
         footer a:hover {
             text-decoration: underline;
-        }
-
-        /* Media Queries pentru responsivitate */
-        @media (max-width: 768px) {
-            header {
-                height: 200px; /* Reducem înălțimea pe dispozitive mici */
-            }
-            header .slogan {
-                font-size: 1.2em; /* Font mai mic pentru slogane */
-            }
-            nav ul li a {
-                font-size: 0.9em; /* Font redus pentru link-uri */
-                padding: 8px 10px; /* Padding mai mic */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                height: 180px; /* Mai puțină înălțime pe ecrane foarte mici */
-            }
-            header .slogan {
-                font-size: 1em; /* Font mai mic */
-            }
-            nav ul {
-                flex-direction: column; /* Stivuire verticală pe ecrane foarte mici */
-                align-items: center;
-            }
-            nav ul li {
-                margin: 5px 0;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="15.jpg" alt="Casa Ta Inteligentă" class="logo">
-        <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
+        <div class="logo-container">
+            <img src="15.jpg" alt="Casa Ta Inteligentă">
+        </div>
+        <h2 class="slogan"></h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="info.html">Informații utile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="produse.html">Produse</a></li>
-            <li><a href="info.html">Informații utile</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
     <section>
         <h3>Contactează-ne</h3>
