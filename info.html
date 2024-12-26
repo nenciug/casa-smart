@@ -12,44 +12,88 @@
             background-color: #f4f4f4;
             color: black;
         }
+
         header {
             text-align: center;
-            background-color: #333;
-            color: black;
-            padding: 0;
-            position: relative;
+        }
+
+        header .logo-container {
             width: 100%;
             height: 300px;
+            overflow: hidden;
+            position: relative;
         }
-        header .logo {
+
+        header .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         header .slogan {
             position: absolute;
             bottom: 20px;
-            width: 100%;
-            font-size: 1.5em;
-            color: black;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding: 5px;
         }
+
+        nav {
+            background-color: #444;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
         nav ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
+
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            margin: 0;
         }
+
         nav ul li a {
-            color: black;
+            display: block;
+            padding: 15px 20px;
             text-decoration: none;
+            color: white;
+            font-size: 1em;
+            text-align: center;
         }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            header .slogan {
+                font-size: 1em;
+            }
+        }
+
         section {
             padding: 20px;
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -59,14 +103,17 @@
             width: 100%;
             margin-top: 40px;
         }
+
         footer p {
             font-size: 0.9em;
             margin: 5px 0;
         }
+
         footer a {
             color: #f4f4f4;
             text-decoration: none;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -74,7 +121,9 @@
 </head>
 <body>
     <header>
-        <img src="14.jpg" alt="Casa Ta Inteligentă" class="logo">
+        <div class="logo-container">
+            <img src="14.jpg" alt="Casa Ta Inteligentă">
+        </div>
         <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
         <nav>
             <ul>
@@ -82,64 +131,58 @@
                 <li><a href="produse.html">Produse</a></li>
                 <li><a href="info.html">Informații utile</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <br>
-                <br>
             </ul>
         </nav>
     </header>
 
     <section>
-        <br>
-        <br>
         <h3>1. Beneficiile unei case inteligente</h3>
         <p>Automatizarea locuinței oferă multiple avantaje care îmbunătățesc calitatea vieții și reduc costurile.</p>
         <ul>
-            <li><strong>Reducerea consumului de energie:</strong> Dispozitivele inteligente, cum ar fi termostatele și becurile LED smart, permit economisirea energiei prin optimizarea consumului. De exemplu, luminile se pot stinge automat când nu ești acasă sau încălzirea se ajustează în funcție de prezență.</li>
-            <li><strong>Creșterea confortului:</strong> Controlezi toate dispozitivele din casă de pe telefon sau prin comenzi vocale. Poți seta rutine precum "Bună dimineața", care pornește lumina, muzica preferată și termostatul.</li>
-            <li><strong>Îmbunătățirea securității:</strong> Sistemele de securitate inteligente oferă monitorizare în timp real, notificări pe telefon și capacitatea de a răspunde la situații de urgență, cum ar fi detectarea fumului sau gazului.</li>
-            <li><strong>Ușurința în gestionare:</strong> Cu un singur hub sau aplicație, poți controla dispozitivele din întreaga casă, fără să comuți între mai multe aplicații.</li>
+            <li><strong>Reducerea consumului de energie:</strong> Dispozitivele inteligente permit economisirea energiei prin optimizarea consumului.</li>
+            <li><strong>Creșterea confortului:</strong> Controlezi dispozitivele din casă de pe telefon sau prin comenzi vocale.</li>
+            <li><strong>Îmbunătățirea securității:</strong> Sistemele de securitate inteligente oferă monitorizare în timp real și notificări pe telefon.</li>
+            <li><strong>Ușurința în gestionare:</strong> Poți controla dispozitivele din întreaga casă dintr-o singură aplicație.</li>
         </ul>
 
         <h3>2. Cum funcționează o casă inteligentă?</h3>
         <p>Automatizarea casei implică integrarea dispozitivelor electronice și controlul lor prin rețea.</p>
         <ul>
-            <li><strong>Control centralizat:</strong> Toate dispozitivele se conectează la un hub (precum Google Home, Amazon Echo sau un hub Z-Wave). Prin acesta, le poți controla fie vocal, fie printr-o aplicație pe telefon.</li>
-            <li><strong>Tehnologii utilizate:</strong> Wi-Fi, Z-Wave și Zigbee sunt protocoale utilizate pentru a conecta dispozitivele în casă.</li>
-            <li><strong>Automatizare:</strong> Creează rutine personalizate, cum ar fi oprirea luminilor și electrocasnicelor atunci când pleci de acasă.</li>
+            <li><strong>Control centralizat:</strong> Toate dispozitivele se conectează la un hub, pe care le poți controla vocal sau prin aplicație.</li>
+            <li><strong>Tehnologii utilizate:</strong> Wi-Fi, Z-Wave și Zigbee sunt protocoale utilizate pentru a conecta dispozitivele.</li>
+            <li><strong>Automatizare:</strong> Creează rutine personalizate pentru a economisi energie și a îmbunătăți confortul.</li>
         </ul>
 
         <h3>3. Sfaturi pentru instalare și întreținere</h3>
-        <p>Asigură-te că dispozitivele tale sunt compatibile și că rețeaua Wi-Fi poate susține multiple conexiuni.</p>
         <ul>
-            <li><strong>Compatibilitate:</strong> Verifică compatibilitatea dispozitivelor cu sistemele populare de automatizare.</li>
+            <li><strong>Compatibilitate:</strong> Verifică compatibilitatea dispozitivelor cu sistemele de automatizare.</li>
             <li><strong>Rețea Wi-Fi:</strong> Asigură-te că ai un router performant pentru a susține dispozitivele Wi-Fi.</li>
-            <li><strong>Testare periodică:</strong> Verifică senzorii și actualizează firmware-ul dispozitivelor pentru a preveni eventualele probleme.</li>
+            <li><strong>Testare periodică:</strong> Verifică și actualizează dispozitivele pentru a preveni problemele.</li>
         </ul>
 
         <h3>4. Ghiduri practice pentru utilizatori</h3>
-        <p>Urmează aceste instrucțiuni pentru a instala și a configura dispozitivele smart din casa ta.</p>
         <ul>
-            <li><strong>Cum să conectezi un bec inteligent:</strong> Instalează becul, deschide aplicația și urmează instrucțiunile pentru configurare.</li>
-            <li><strong>Cum setezi termostatul pentru economisirea energiei:</strong> Alege modul Eco și setează temperaturile dorite pe timpul nopții.</li>
+            <li><strong>Cum să conectezi un bec inteligent:</strong> Urmează instrucțiunile din aplicație pentru configurare.</li>
+            <li><strong>Cum setezi termostatul:</strong> Alege modul Eco și setează temperaturile dorite pe timpul nopții.</li>
         </ul>
 
         <h3>5. Întrebări frecvente (FAQ)</h3>
         <ul>
-            <li><strong>Ce dispozitive pot fi integrate într-o casă inteligentă?</strong> Aproape orice: iluminat, termostate, camere de supraveghere, electrocasnice și chiar draperii motorizate.</li>
-            <li><strong>Este complicat să instalez un sistem singur?</strong> Depinde de dispozitiv, dar majoritatea sunt ușor de instalat de către utilizatori.</li>
+            <li><strong>Ce dispozitive pot fi integrate într-o casă inteligentă?</strong> Iluminat, termostate, camere de supraveghere, electrocasnice și altele.</li>
+            <li><strong>Este complicat să instalez un sistem singur?</strong> Majoritatea sunt ușor de instalat.</li>
         </ul>
 
         <h3>6. Informații despre siguranță și confidențialitate</h3>
-        <p>Asigură-te că dispozitivele tale sunt sigure și protejează-ți datele personale prin criptare și parole puternice.</p>
+        <p>Asigură-te că dispozitivele tale sunt sigure și protejează-ți datele prin criptare.</p>
 
         <h3>7. Exemple de proiecte implementate</h3>
         <ul>
-            <li><strong>Apartament inteligent:</strong> Automatizarea completă a unui apartament cu becuri smart, termostat și sistem de securitate.</li>
-            <li><strong>Casă de vacanță:</strong> Controlul la distanță al iluminatului și încălzirii.</li>
+            <li><strong>Apartament inteligent:</strong> Automatizare completă cu becuri smart, termostat și sistem de securitate.</li>
+            <li><strong>Casă de vacanță:</strong> Control la distanță pentru iluminat și încălzire.</li>
         </ul>
 
         <h3>8. Contact și oferte personalizate</h3>
-        <p>Pentru mai multe detalii sau o ofertă personalizată, nu ezitați să ne contactați! Suntem aici pentru a vă ajuta să transformați locuința într-o casă inteligentă.</p>
+        <p>Pentru mai multe detalii sau o ofertă personalizată, contactați-ne!</p>
     </section>
 
     <footer>
