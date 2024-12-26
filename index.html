@@ -14,32 +14,34 @@
         }
 
         header {
-            text-align: center;
             background-color: #333;
-            color: black;
-            padding: 0;
-            position: relative;
-            width: 100%;
-            height: 300px;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
         }
 
-        header .logo {
+        header .slogan {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .logo-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        header .slogan {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            font-size: 1.5em;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
         nav {
             background-color: #444;
+            position: sticky; /* Fixează meniul în partea de sus la scroll */
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -117,16 +119,12 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .slogan {
+                font-size: 1.2em;
+            }
+
             nav ul {
                 flex-direction: column;
-            }
-
-            header {
-                height: 200px;
-            }
-
-            header .slogan {
-                font-size: 1.2em;
             }
 
             .example {
@@ -141,26 +139,23 @@
 </head>
 <body>
     <header>
-        <img src="11.png" alt="Casa Ta Inteligentă" class="logo">
         <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="produse.html">Produse</a></li>
-                <li><a href="info.html">Informații utile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="produse.html">Produse</a></li>
+            <li><a href="info.html">Informații utile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="logo-container">
+        <img src="11.png" alt="Casa Ta Inteligentă">
+    </div>
     
     <section class="examples">
-        <br>
-         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <h3>Exemple de automatizări</h3>
         <div class="image-container">
             <div class="example">
