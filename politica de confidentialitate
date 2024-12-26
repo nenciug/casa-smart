@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Confidențialitate - Casa Ta Inteligentă</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+        header .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header .slogan {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://www.esserepensiero.it/s/cc_images/cache_29582843.jpg?t=1691353368" alt="Casa Ta Inteligentă" class="logo">
+        <h2 class="slogan">Politica de Confidențialitate pentru Casa Ta Inteligentă</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="termeni.html">Termeni și Condiții</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h3>Politica de Confidențialitate</h3>
+        <p>Ultima actualizare: 26 Decembrie 2024</p>
+
+        <h4>1. Informațiile pe care le colectăm</h4>
+        <p>Colectăm informații personale, cum ar fi numele, adresa de e-mail și alte date relevante atunci când vă înregistrați pe site-ul nostru, completați un formular sau efectuați o achiziție. De asemenea, putem colecta informații de utilizare a site-ului prin intermediul cookie-urilor.</p>
+
+        <h4>2. Cum utilizăm informațiile</h4>
+        <p>Informațiile colectate sunt folosite pentru a îmbunătăți serviciile noastre, pentru a personaliza experiența utilizatorului, pentru a trimite actualizări importante și pentru a procesa comenzile. În niciun caz nu vom vinde sau închiria informațiile dumneavoastră personale altor terțe părți.</p>
+
+        <h4>3. Cum protejăm informațiile</h4>
+        <p>Luăm măsuri de securitate pentru a proteja informațiile dumneavoastră personale împotriva accesului neautorizat, modificării, dezvăluirii sau distrugerii. Aceste măsuri includ criptarea datelor și proceduri de securitate adecvate pe serverele noastre.</p>
+
+        <h4>4. Cookie-uri</h4>
+        <p>Folosim cookie-uri pentru a îmbunătăți experiența utilizatorului pe site-ul nostru. Cookie-urile ne permit să reținem preferințele și să analizăm traficul pe site. Puteți să ajustați setările de cookie-uri în browserul dumneavoastră, dar rețineți că acest lucru poate afecta funcționalitatea site-ului.</p>
+
+        <h4>5. Drepturile dumneavoastră</h4>
+        <p>Conform legislației în vigoare, aveți dreptul de a solicita accesul, rectificarea sau ștergerea informațiilor dumneavoastră personale pe care le deținem. Puteți de asemenea să vă opuneți prelucrării datelor sau să solicitați restricționarea acestora. Pentru a exercita aceste drepturi, contactați-ne prin formularul de pe pagina <a href="contact.html">Contact</a>.</p>
+
+        <h4>6. Partajarea informațiilor</h4>
+        <p>Nu vom vinde, închiria sau dezvălui informațiile dumneavoastră personale unor terțe părți, cu excepția cazurilor în care acest lucru este necesar pentru a respecta cerințele legale sau pentru a furniza servicii de suport tehnic, procesare plăți etc.</p>
+
+        <h4>7. Modificări ale Politicii de Confidențialitate</h4>
+        <p>Este posibil să actualizăm această politică periodic. Orice modificare va fi publicată pe această pagină și va intra în vigoare imediat ce este postată. Vă recomandăm să verificați periodic această secțiune pentru a fi la curent cu eventualele schimbări.</p>
+
+        <h4>8. Contact</h4>
+        <p>Dacă aveți întrebări sau nelămuriri legate de politica noastră de confidențialitate, nu ezitați să ne contactați prin intermediul formularului de pe pagina <a href="contact.html">Contact</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Casa Ta Inteligentă. Toate drepturile rezervate.</p>
+        <p><a href="#">Termeni și Condiții</a> | <a href="#">Politica de Confidențialitate</a> | <a href="#">Contact</a></p>
+    </footer>
+
+</body>
+</html>
