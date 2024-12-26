@@ -19,7 +19,7 @@
             padding: 0;
             position: relative;
             width: 100%;
-            height: 300px;
+            height: 250px;
         }
         header .logo {
             width: 100%;
@@ -37,20 +37,24 @@
         nav ul {
             list-style-type: none;
             padding: 0;
-            margin-top: 20px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite împachetarea pe dispozitive mici */
         }
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            margin: 5px;
         }
         nav ul li a {
             color: #007BFF; /* Culoare albastru deschis */
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px;
+            padding: 10px 15px;
             border-radius: 5px;
             background-color: #E8F0FE; /* Fundal deschis */
             transition: background-color 0.3s, color 0.3s;
+            display: block; /* Pentru o dimensiune consistentă pe mobil */
+            text-align: center;
         }
         nav ul li a:hover {
             background-color: #007BFF; /* Fundal albastru intens */
@@ -78,6 +82,36 @@
         }
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries pentru responsivitate */
+        @media (max-width: 768px) {
+            header {
+                height: 200px; /* Reducem înălțimea pe dispozitive mici */
+            }
+            header .slogan {
+                font-size: 1.2em; /* Font mai mic pentru slogane */
+            }
+            nav ul li a {
+                font-size: 0.9em; /* Font redus pentru link-uri */
+                padding: 8px 10px; /* Padding mai mic */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                height: 180px; /* Mai puțină înălțime pe ecrane foarte mici */
+            }
+            header .slogan {
+                font-size: 1em; /* Font mai mic */
+            }
+            nav ul {
+                flex-direction: column; /* Stivuire verticală pe ecrane foarte mici */
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
