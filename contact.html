@@ -34,10 +34,17 @@
             color: black;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+        nav {
+            background-color: #007BFF; /* Fundal albastru */
+            position: sticky; /* Meniu fix în partea de sus */
+            top: 0;
+            z-index: 1000; /* Asigurăm că meniul rămâne deasupra altor elemente */
+            padding: 10px 0;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
-            margin: 10px 0;
+            margin: 0;
             display: flex;
             justify-content: center;
             flex-wrap: wrap; /* Permite împachetarea pe dispozitive mici */
@@ -46,22 +53,23 @@
             margin: 5px;
         }
         nav ul li a {
-            color: #007BFF; /* Culoare albastru deschis */
+            color: white; /* Text alb */
             text-decoration: none;
             font-weight: bold;
             padding: 10px 15px;
             border-radius: 5px;
-            background-color: #E8F0FE; /* Fundal deschis */
+            background-color: #0056b3; /* Fundal albastru mai închis */
             transition: background-color 0.3s, color 0.3s;
             display: block; /* Pentru o dimensiune consistentă pe mobil */
             text-align: center;
         }
         nav ul li a:hover {
-            background-color: #007BFF; /* Fundal albastru intens */
+            background-color: #003d80; /* Fundal albastru intens */
             color: white; /* Text alb */
         }
         section {
             padding: 20px;
+            margin-top: 20px; /* Asigură spațiu sub meniu */
         }
         footer {
             background-color: #333;
@@ -119,19 +127,18 @@
     <header>
         <img src="https://www.esserepensiero.it/s/cc_images/cache_29582843.jpg?t=1691353368" alt="Casa Ta Inteligentă" class="logo">
         <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="produse.html">Produse</a></li>
-                <li><a href="info.html">Informații utile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="produse.html">Produse</a></li>
+            <li><a href="info.html">Informații utile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <section>
-        <br>
-        <br>
         <h3>Contactează-ne</h3>
         <p>Adresa noastră: str Aleea florilor 20, Brașov, România</p>
         <p>Email: case-inteligente@outlook.com</p>
