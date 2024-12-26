@@ -10,48 +10,63 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: black; /* Culoare text negru */
+            color: black;
         }
 
         header {
             text-align: center;
             background-color: #333;
             color: black;
-            padding: 0; /* Elimină padding-ul pentru ca imaginea să ocupe tot spațiul */
+            padding: 0;
             position: relative;
             width: 100%;
-            height: 300px; /* Poți ajusta înălțimea header-ului după preferință */
+            height: 300px;
         }
 
         header .logo {
-            width: 100%; /* Imaginea va ocupa întreaga lățime a header-ului */
-            height: 100%; /* Imaginea va acoperi întreaga înălțime a header-ului */
-            object-fit: cover; /* Asigură că imaginea acoperă complet spațiul fără a se distorsiona */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         header .slogan {
             position: absolute;
-            bottom: 20px; /* Plasează sloganul la baza imaginii */
+            bottom: 20px;
             width: 100%;
             font-size: 1.5em;
-            color: black;
+            color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            background-color: #444;
         }
 
         nav ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            margin: 0;
         }
 
         nav ul li a {
-            color: black;
+            display: block;
+            padding: 15px 20px;
+            color: white;
             text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9800;
+            color: white;
         }
 
         section {
@@ -60,17 +75,19 @@
 
         .image-container {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
             margin-top: 30px;
         }
 
         .example {
             text-align: center;
-            max-width: 300px; /* Limitează lățimea fiecărei secțiuni de exemplu */
+            max-width: 300px;
+            margin: 10px;
         }
 
         .example img {
-            width: 100%; /* Imaginea va ocupa întreaga lățime a containerului */
+            width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
@@ -82,7 +99,6 @@
             padding: 20px 0;
             position: relative;
             width: 100%;
-            margin-top: 40px;
         }
 
         footer p {
@@ -99,13 +115,27 @@
             text-decoration: underline;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
 
-        ul li {
-            margin: 10px 0;
+            header {
+                height: 200px;
+            }
+
+            header .slogan {
+                font-size: 1.2em;
+            }
+
+            .example {
+                max-width: 100%;
+            }
+
+            .example img {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
@@ -124,8 +154,6 @@
     </header>
     
     <section class="examples">
-        <br>
-        <br>
         <h3>Exemple de automatizări</h3>
         <div class="image-container">
             <div class="example">
@@ -143,10 +171,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Casa Ta Inteligentă. Toate drepturile rezervate.</p>
-         <p><a href="termeni si conditii.html">Termeni și Condiții</a> | <a href="politica de confidentialitate">Politica de Confidențialitate</a> | <a href="contact.html">Contact</a></p>
+        <p><a href="termeni si conditii.html">Termeni și Condiții</a> | <a href="politica de confidentialitate">Politica de Confidențialitate</a> | <a href="contact.html">Contact</a></p>
     </footer>
 </body>
 </html>
