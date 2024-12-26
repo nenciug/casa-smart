@@ -14,15 +14,7 @@
         }
 
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
             text-align: center;
-        }
-
-        header .slogan {
-            margin: 0;
-            font-size: 1.5em;
         }
 
         .logo-container {
@@ -37,11 +29,15 @@
             object-fit: cover;
         }
 
+        .slogan {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
         nav {
             background-color: #444;
-            position: sticky; /* Fixează meniul în partea de sus la scroll */
-            top: 0;
-            z-index: 1000;
+            margin-top: 10px;
         }
 
         nav ul {
@@ -99,8 +95,7 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: relative;
-            width: 100%;
+            margin-top: 40px;
         }
 
         footer p {
@@ -121,6 +116,7 @@
         @media (max-width: 768px) {
             .slogan {
                 font-size: 1.2em;
+                padding: 10px;
             }
 
             nav ul {
@@ -139,6 +135,9 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="11.png" alt="Casa Ta Inteligentă">
+        </div>
         <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
     </header>
 
@@ -151,10 +150,6 @@
         </ul>
     </nav>
 
-    <div class="logo-container">
-        <img src="11.png" alt="Casa Ta Inteligentă">
-    </div>
-    
     <section class="examples">
         <h3>Exemple de automatizări</h3>
         <div class="image-container">
