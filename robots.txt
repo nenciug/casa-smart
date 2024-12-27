@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://nenciug.github.io/case-smart/sitemap.xml
 
