@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55BWCZKP');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produse - Casa Ta Inteligentă</title>
@@ -43,7 +50,7 @@
 
         nav {
             background-color: #444;
-            position: sticky;
+            position: sticky; /* Fixează meniul în partea de sus la scroll */
             top: 0;
             z-index: 1000;
         }
@@ -76,7 +83,7 @@
 
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
+                flex-direction: column; /* Meniul devine vertical pe ecrane mici */
                 align-items: center;
             }
 
@@ -92,27 +99,6 @@
 
         section {
             padding: 20px;
-        }
-
-        .product {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .product img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-
-        .product h4 {
-            margin: 0 0 10px 0;
         }
 
         footer {
@@ -138,9 +124,80 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Modificări pentru produse */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-info {
+            margin-top: 15px;
+        }
+
+        .product-info h5 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .product-info p {
+            font-size: 1em;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Responsive pentru ecrane mici */
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr; /* Pe ecrane mici, afișează produsele pe un singur rând */
+            }
+
+            .product-info h5 {
+                font-size: 1em;
+            }
+
+            .product-info p {
+                font-size: 0.9em;
+            }
+
+            .product-price {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55BWCZKP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="logo-container">
             <img src="12.jpg" alt="Casa Ta Inteligentă">
@@ -160,135 +217,27 @@
         <h3>Produsele noastre:</h3>
         <p>Oferim soluții complete pentru automatizarea casei tale. Fie că îți dorești un sistem de iluminat inteligent, un termostat modern sau un sistem de securitate avansat, noi avem soluția ideală pentru tine.</p>
 
-        <!-- Produse principale -->
-        <div class="product">
-            <img src="images/Captura.png" alt="Bec inteligent">
-            <div>
-                <h4>Bec inteligent LED</h4>
-                <p>Preț: 100 RON/buc</p>
+        <h4>Listă produse și prețuri (cu dispozitive și manoperă)</h4>
+        <div class="product-container">
+            <!-- Exemplu de produs -->
+            <div class="product-item">
+                <img src="images\Captura.png" alt="Iluminat inteligent" class="product-image">
+                <div class="product-info">
+                    <h5>Iluminat inteligent</h5>
+                    <p>Descriere scurtă a produsului. Detalii suplimentare dacă este necesar.</p>
+                    <span class="product-price">100 RON</span>
+                </div>
             </div>
-        </div>
-
-        <div class="product">
-            <img src="images/banda-led.jpg" alt="Bandă LED RGB">
-            <div>
-                <h4>Bandă LED RGB</h4>
-                <p>Preț: 300 RON/5 metri</p>
+            <div class="product-item">
+                <img src="product2.jpg" alt="Termostat inteligent" class="product-image">
+                <div class="product-info">
+                    <h5>Termostat inteligent</h5>
+                    <p>Descriere scurtă a produsului. Detalii suplimentare dacă este necesar.</p>
+                    <span class="product-price">550 RON</span>
+                </div>
             </div>
+            <!-- Adaugă mai multe produse în același format -->
         </div>
-
-        <div class="product">
-            <img src="images/termostat.jpg" alt="Termostat Wi-Fi">
-            <div>
-                <h4>Termostat inteligent Wi-Fi</h4>
-                <p>Preț: 550 RON</p>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="images/camera-securitate.jpg" alt="Cameră de supraveghere">
-            <div>
-                <h4>Cameră de supraveghere</h4>
-                <p>Preț: 200 RON/buc</p>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="images/priza-inteligenta.jpg" alt="Priză inteligentă">
-            <div>
-                <h4>Priză inteligentă Wi-Fi</h4>
-                <p>Preț: 200 RON/buc</p>
-            </div>
-        </div>
-
-        <!-- Produse suplimentare -->
-        <h4>Produse suplimentare:</h4>
-        <ul>
-            <li><b>Automatizare electrocasnice:</b>
-                <div class="product">
-                    <img src="images/smart-hub.jpg" alt="Smart Hub">
-                    <div>
-                        <h4>Smart Hub pentru automatizarea electrocasnicelor (montaj inclus)</h4>
-                        <p>Preț: 700 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/robot-aspirator.jpg" alt="Robot Aspirator">
-                    <div>
-                        <h4>Robot aspirator inteligent (configurare și integrare în sistem)</h4>
-                        <p>Preț: 2.500 RON</p>
-                    </div>
-                </div>
-            </li>
-
-            <li><b>Control vocal și centralizare:</b>
-                <div class="product">
-                    <img src="images/control-vocal.jpg" alt="Control Vocal">
-                    <div>
-                        <h4>Dispozitiv de control vocal (compatibil Alexa/Google Home) (configurare inclusă)</h4>
-                        <p>Preț: 350 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/hub-automation.jpg" alt="Hub de Automatizare">
-                    <div>
-                        <h4>Hub de automatizare Z-Wave (montaj și configurare)</h4>
-                        <p>Preț: 850 RON</p>
-                    </div>
-                </div>
-            </li>
-
-            <li><b>Accesorii utile:</b>
-                <div class="product">
-                    <img src="images/senzor-temperatura.jpg" alt="Senzor Temperatură">
-                    <div>
-                        <h4>Senzor inteligent de temperatură și umiditate (instalare și integrare)</h4>
-                        <p>Preț: 150 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/senzor-inundatie.jpg" alt="Senzor Inundație">
-                    <div>
-                        <h4>Senzor de inundație Wi-Fi (montaj și configurare)</h4>
-                        <p>Preț: 150 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/senzor-prezenta.jpg" alt="Senzor Prezență">
-                    <div>
-                        <h4>Senzor de prezență (instalare și configurare)</h4>
-                        <p>Preț: 150 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/senzor-fum.jpg" alt="Senzor Fum Inteligent">
-                    <div>
-                        <h4>Senzor de fum inteligent (montaj și conectare la aplicație)</h4>
-                        <p>Preț: 200 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/senzor-gaz.jpg" alt="Senzor Gaz Inteligent">
-                    <div>
-                        <h4>Senzor de gaz inteligent (instalare și configurare)</h4>
-                        <p>Preț: 150 RON</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/senzor-usa.jpg" alt="Senzor Ușă/Geam">
-                    <div>
-                        <h4>Senzor pentru uși/geamuri (montaj inclus)</h4>
-                        <p>Preț: 100 RON/buc</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/bariera-ir.jpg" alt="Barieră IR">
-                    <div>
-                        <h4>Barieră IR (infraroșu) (montaj și configurare)</h4>
-                        <p>Preț: 600 RON</p>
-                </ul>
-            </li>
-        </ul>
 
         <h4>Costuri suplimentare: Manoperă fără dispozitive</h4>
         <ul>
@@ -304,15 +253,13 @@
             <li>Deplasare în afara municipiului Brașov - 2 RON/km</li>
         </ul>
 
-        <p><b>Pentru o ofertă personalizată, nu ezitați să ne contactați! Whatsapp - 0775602083 </b></p>
-        <br>
-        <p><b>Pretul produselor sunt estimative, calculate la dispozitive de calitate medie! </b></p>
-    
+        <p><b>Pentru o ofertă personalizată, contactați-ne!</b></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Casa Ta Inteligentă. Toate drepturile rezervate.</p>
-        <p><a href="#">Termeni și Condiții</a> | <a href="#">Politica de Confidențialitate</a> | <a href="#">Contact</a></p>
+        <p>&copy; 2024 Casa Ta Inteligentă</p>
+        <p>Toate drepturile rezervate.</p>
+        <p><a href="politica_privacy.html">Politica de confidențialitate</a></p>
     </footer>
 </body>
 </html>
