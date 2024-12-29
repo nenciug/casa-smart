@@ -37,6 +37,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         header {
             text-align: center;
+            position: relative;
+        }
+
+        .scrolling-message {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ffcc00;
+            color: black;
+            font-weight: bold;
+        }
+
+        .scrolling-message span {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         .logo-container {
@@ -134,47 +160,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             text-decoration: underline;
         }
 
-        .announcement {
-            background-color: #ffcc00;
-            color: #000;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.2em;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .announcement {
-    background-color: #ffcc00;
-    color: #000;
-    padding: 15px 10px; /* Crește padding-ul */
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    overflow: hidden;
-    position: relative;
-    height: auto; /* Asigură-te că înălțimea se ajustează */
-}
-
-.announcement span {
-    display: inline-block;
-    white-space: nowrap;
-    position: absolute;
-    animation: scroll-left 10s linear infinite;
-    padding-right: 100%; /* Adaugă spațiu pentru margini */
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-
         @media (max-width: 768px) {
             .slogan {
                 font-size: 1.2em;
@@ -203,10 +188,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55BWCZKP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
- <div class="announcement">
-        <span>🎉 Reducere specială! Pentru următoarele 10 persoane, aplicăm 50% reducere la manoperă! Nu rata această ofertă limitată! 🎉</span>
-    </div>
+    <header>
+        <div class="scrolling-message">
+            <span>🌟 Surpriză! Primele 10 persoane care ne contactează vor beneficia de o reducere de 50% la manoperă! Grăbește-te! 🌟</span>
+        </div>
+        <div class="logo-container">
+            <img src="11.png" alt="Logo Casa Ta Inteligentă">
+        </div>
+        <h2 class="slogan">Transformăm locuințele obișnuite în case inteligente!</h2>
+    </header>
 
     <nav>
         <ul>
