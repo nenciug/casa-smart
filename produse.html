@@ -2,22 +2,22 @@
 <html lang="ro">
 <head>
     <link rel="icon" href="nenciug.webp" type="image/png">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon-96x96.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Casa Ta Inteligentă",
-  "url": "https://nenciug.github.io/casa-smart/index.html",
-  "logo": "https://nenciug.github.io/casa-smart/apple-touch-icon.png",
-  "sameAs": [
-    "https://facebook.com/pagina-facebook",
-    "https://instagram.com/pagina-instagram"
-  ]
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Casa Ta Inteligentă",
+      "url": "https://nenciug.github.io/casa-smart/index.html",
+      "logo": "https://nenciug.github.io/casa-smart/apple-touch-icon.png",
+      "sameAs": [
+        "https://facebook.com/pagina-facebook",
+        "https://instagram.com/pagina-instagram"
+      ]
+    }
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -28,15 +28,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11536567772">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11536567772"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-11536567772');
-</script>
+      gtag('config', 'AW-11536567772');
+    </script>
     <title>Produse - Casa Ta Inteligentă</title>
     <style>
         body {
@@ -77,7 +76,7 @@
 
         nav {
             background-color: #444;
-            position: sticky; /* Fixează meniul în partea de sus la scroll */
+            position: sticky;
             top: 0;
             z-index: 1000;
         }
@@ -108,9 +107,23 @@
             background-color: #555;
         }
 
+        .cart-button {
+            background-color: #28a745;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .cart-button:hover {
+            background-color: #218838;
+        }
+
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column; /* Meniul devine vertical pe ecrane mici */
+                flex-direction: column;
                 align-items: center;
             }
 
@@ -152,7 +165,6 @@
             text-decoration: underline;
         }
 
-        /* Modificări pentru produse */
         .product-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -200,10 +212,9 @@
             font-weight: bold;
         }
 
-        /* Responsive pentru ecrane mici */
         @media (max-width: 768px) {
             .product-container {
-                grid-template-columns: 1fr; /* Pe ecrane mici, afișează produsele pe un singur rând */
+                grid-template-columns: 1fr;
             }
 
             .product-info h5 {
@@ -218,13 +229,82 @@
                 font-size: 1em;
             }
         }
+
+        .cart-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            background-color: white;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .cart-container h4 {
+            text-align: center;
+        }
+
+        .cart-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .cart-container .close-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .cart-container .close-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .confirm-order-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .confirm-order-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .notification.show {
+            display: block;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55BWCZKP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="logo-container">
             <img src="12.jpg" alt="Casa Ta Inteligentă">
@@ -237,6 +317,7 @@
                 <li><a href="info.html">Informații utile</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="cart-button" onclick="toggleCart()">Coș de cumpărături</button>
         </nav>
     </header>
 
@@ -244,198 +325,287 @@
         <h3>Produsele noastre:</h3>
         <p>Oferim soluții complete pentru automatizarea casei tale. Fie că îți dorești un sistem de iluminat inteligent, un termostat modern sau un sistem de securitate avansat, noi avem soluția ideală pentru tine.</p>
 
-        <h4>Listă produse și prețuri (dispozitiv și manoperă inclusa)</h4>
+        <h4>Listă produse și prețuri<br>La achizitionarea mai multor dispozitive, pretul manoperei scade.</h4>
         <div class="product-container">
-            <!-- Exemplu de produs -->
-        
-            <div class="product-item">
-                <img src="termostat.PNG" alt="Termostat inteligent" class="product-image">
+
+             <div class="product-item">
+                <img src="manopera.png" alt="Manopera" class="product-image">
                 <div class="product-info">
-                    <h5>Termostat inteligent</h5>
-                    <p>Te ajuta sa creezi scenarii pentru a mentine o temperatura/umiditate perfecte!.</p>
+                    <h5>Manopera (instalare, configurare, integrare dispozitiv)</h5>
+                    <p>Daca aveti deja un dispozitiv smart sau mai multe, si aveti nevoie de ajutor pentru instalare/configurare, plasati comanda pentru manopera si va vom contacta in cel mai scurt timp!</p>
+                    <span class="product-price">Se discuta telefonic</span>
+                    <button onclick="addToCart('Manopera', 0)">Adaugă în coș</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="termostat.PNG" alt="Termostat inteligent (montare/configurare inclus)" class="product-image">
+                <div class="product-info">
+                    <h5>Termostat inteligent (montare/configurare inclus)</h5>
+                    <p>Te ajuta sa creezi scenarii pentru a mentine o temperatura/umiditate perfecte!</p>
                     <span class="product-price">550 RON</span>
+                    <button onclick="addToCart('Termostat inteligent', 550)">Adaugă în coș</button>
                 </div>
-                </div>
-            <div class="product-item">
-                <img src="poarta.PNG" alt="Automatizare porta auto\garaj" class="product-image">
-                <div class="product-info">
-                    <h5>Automatizare poarta!</h5>
-                    <p>Deschide poarta in 2 moduri, cu telecomanda sau prin smartphone.</p>
-                    <span class="product-price">1800 RON</span>
-                </div>
-                </div>
-<div class="product-item">
-                <img src="Captură.PNG" alt="Iluminat inteligent" class="product-image">
-                <div class="product-info">
-                    <h5>Iluminat inteligent</h5>
-                    <p>Aprinde/stinge iluminatul de oriunde, sau creaza scenarii prin care se aprinde/stinge in functie de prezenta, perioada zilei, etc.</p>
-                    <span class="product-price">100 RON</span>
-                
             </div>
-            </div>
-            <!-- Adaugă mai multe produse în același format -->
+
             <div class="product-item">
-                <img src="camere.PNG" alt="Sistem de securitate video" class="product-image">
+                <img src="camere.PNG" alt="Sistem de securitate video (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Sistem de securitate video</h5>
+                    <h5>Sistem de securitate video (montare/configurare inclus)</h5>
                     <p>Un sistem avansat de securitate cu camere video și alertă în timp real pentru protecția casei tale.</p>
                     <span class="product-price">1,200 RON</span>
+                    <button onclick="addToCart('Sistem de securitate video', 1200)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="senzor miscare.PNG" alt="Senzori de mișcare" class="product-image">
+                <img src="senzor miscare.PNG" alt="Senzori de mișcare (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Senzori de mișcare</h5>
+                    <h5>Senzori de mișcare (montare/configurare inclus)</h5>
                     <p>Senzorii de mișcare pot detecta prezența în cameră și pot activa automat lumina sau alte dispozitive.</p>
-                    <span class="product-price">150 RON</span>
+                    <span class="product-price">100 RON</span>
+                    <button onclick="addToCart('Senzori de mișcare', 100)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="priza aplicata.PNG" alt="Priză inteligentă" class="product-image">
+                <img src="priza aplicata.PNG" alt="Priză inteligentă (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Priză inteligentă</h5>
+                    <h5>Priză inteligentă (montare/configurare inclus)</h5>
                     <p>Priza inteligentă îți permite să controlezi alimentarea dispozitivelor tale de la distanță, economisind energie și asigurând siguranța casei tale.</p>
-                    <span class="product-price">100 RON</span>
+                    <span class="product-price">80 RON</span>
+                    <button onclick="addToCart('Priză inteligentă', 80)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="priza.PNG" alt="Priză inteligentă Wi-Fi" class="product-image">
+                <img src="priza.PNG" alt="Priză inteligentă Wi-Fi (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Priză inteligentă Wi-Fi in doza (montaj și configurare)</h5>
+                    <h5>Priză inteligentă Wi-Fi in doza (montare/configurare inclus)</h5>
                     <p>Controlează de la distanță dispozitivele prin Wi-Fi și economisește energie.</p>
-                    <span class="product-price">200 RON</span>
+                    <span class="product-price">130 RON</span>
+                    <button onclick="addToCart('Priză inteligentă Wi-Fi', 130)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="smarthub.PNG" alt="Smart Hub" class="product-image">
+                <img src="smarthub.PNG" alt="Smart Hub (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Smart Hub pentru automatizarea electrocasnicelor (montaj inclus)</h5>
+                    <h5>Smart Hub pentru automatizarea electrocasnicelor (montare/configurare inclus)</h5>
                     <p>Un hub pentru integrarea și automatizarea electrocasnicelor tale.</p>
-                    <span class="product-price">100 RON</span>
+                    <span class="product-price">80 RON</span>
+                    <button onclick="addToCart('Smart Hub', 80)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="aspirator.PNG" alt="Robot aspirator" class="product-image">
+                <img src="aspirator.PNG" alt="Robot aspirator (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Robot aspirator inteligent (configurare și integrare în sistem)</h5>
+                    <h5>Robot aspirator inteligent (montare/configurare inclus)</h5>
                     <p>Un robot aspirator care poate fi controlat prin aplicație sau voce pentru curățenie automată.</p>
-                    <span class="product-price">2,500 RON</span>
+                    <span class="product-price">1,500 RON</span>
+                    <button onclick="addToCart('Robot aspirator', 1500)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-                <img src="alexa.PNG" alt="Dispozitiv de control vocal" class="product-image">
+                <img src="alexa.PNG" alt="Dispozitiv de control vocal (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Dispozitiv de control vocal (compatibil Alexa/Google Home)</h5>
-                    <p>Controlează toate dispozitivele tale inteligente prin comenzi vocale cu Alexa sau Google Home.</p>
+                    <h5>Dispozitiv de control vocal (montare/configurare inclus)</h5>
+                    <p>Controlează toate dispozitivele tale inteligente prin comenzi vocale cu Alexa.</p>
                     <span class="product-price">350 RON</span>
+                    <button onclick="addToCart('Dispozitiv de control vocal', 350)">Adaugă în coș</button>
                 </div>
             </div>
 
             <div class="product-item">
-    <img src="senzor temp.PNG" alt="Senzor inteligent de temperatură și umiditate" class="product-image">
+                <img src="senzor temp.PNG" alt="Senzor inteligent de temperatură și umiditate (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Senzor inteligent de temperatură și umiditate (instalare și integrare)</h5>
+        <h5>Senzor inteligent de temperatură și umiditate (montare/configurare inclus)</h5>
         <p>Monitorizează temperatura și umiditatea din locuința ta și trimite notificări pe telefon.</p>
-        <span class="product-price">150 RON</span>
-    </div>
-</div>
+        <span class="product-price">120 RON</span>
+                    <button onclick="addToCart('Senzor inteligent de temperatură și umiditate', 120)">Adaugă în coș</button>
+                </div>
+            </div>
 
-<div class="product-item">
-    <img src="releu.PNG" alt="Releu Smart" class="product-image">
+            <div class="product-item">
+                <img src="releu.PNG" alt="Releu Smart (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Releu Smart (montaj și configurare)</h5>
+        <h5>Releu Smart (montare/configurare inclus)</h5>
         <p>Controleaza orice dispozitiv eletronic conectat la acest dispozitiv.</p>
         <span class="product-price">100 RON</span>
-    </div>
-</div>
+                    <button onclick="addToCart('Releu Smart', 100)">Adaugă în coș</button>
+                </div>
+            </div>
 
             <div class="product-item">
-    <img src="camera 360.PNG" alt="Cameră Wi-Fi Rotativă" class="product-image">
+                 <img src="camera 360.PNG" alt="Cameră Wi-Fi Rotativă (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Cameră Wi-Fi Rotativă (montaj și configurare)</h5>
+        <h5>Cameră Wi-Fi Rotativă (montare/configurare inclus)</h5>
         <p>Cameră Wi-Fi Rotativă – Supraveghere inteligentă 360° cu control de la distanță, calitate video HD, vedere nocturnă și detectare a mișcării. Ideală pentru siguranța casei tale!</p>
-        <span class="product-price">250 RON</span>
-    </div>
-</div>
-
-<div class="product-item">
-    <img src="senz inundatie.PNG" alt="Senzor de inundație Wi-Fi" class="product-image">
-    <div class="product-info">
-        <h5>Senzor de inundație Wi-Fi (montaj și configurare)</h5>
-        <p>Detectează scurgerile de apă și te avertizează imediat prin aplicație.</p>
         <span class="product-price">150 RON</span>
-    </div>
-</div>
+                    <button onclick="addToCart('Cameră Wi-Fi Rotativă', 150)">Adaugă în coș</button>
+                </div>
+            </div>
 
-<div class="product-item">
-    <img src="enzor fum.PNG" alt="Senzor de fum inteligent" class="product-image">
+            <div class="product-item">
+                 <img src="senz inundatie.PNG" alt="Senzor de inundație Wi-Fi (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Senzor de fum inteligent (montaj și conectare la aplicație)</h5>
+        <h5>Senzor de inundație Wi-Fi (montare/configurare inclus)</h5>
+        <p>Detectează scurgerile de apă și te avertizează imediat prin aplicație.</p>
+        <span class="product-price">120 RON</span>
+                    <button onclick="addToCart('Senzor de inundație Wi-Fi', 120)">Adaugă în coș</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="enzor fum.PNG" alt="Senzor de fum inteligent (montare/configurare inclus)" class="product-image">
+    <div class="product-info">
+        <h5>Senzor de fum inteligent (montare/configurare inclus)</h5>
         <p>Detectează fumul și trimite alerte instantanee pe telefonul tău.</p>
-        <span class="product-price">200 RON</span>
-    </div>
-</div>
+        <span class="product-price">130 RON</span>
+                    <button onclick="addToCart('Senzor de fum inteligent', 130)">Adaugă în coș</button>
+                </div>
+            </div>
 
-<div class="product-item">
-    <img src="gaz.PNG" alt="Senzor de gaz inteligent" class="product-image">
+            <div class="product-item">
+               <img src="gaz.PNG" alt="Senzor de gaz inteligent (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Senzor de gaz inteligent (instalare și configurare)</h5>
+        <h5>Senzor de gaz inteligent (montare/configurare inclus)</h5>
         <p>Monitorizează scurgerile de gaz și trimite notificări în timp real.</p>
         <span class="product-price">150 RON</span>
-    </div>
-</div>
+                    <button onclick="addToCart('Senzor de gaz inteligent', 150)">Adaugă în coș</button>
+                </div>
+            </div>
 
-<div class="product-item">
-    <img src="senz usa.PNG" alt="Senzor pentru uși/geamuri" class="product-image">
+            <div class="product-item">
+                <img src="senz usa.PNG" alt="Senzor pentru uși/geamuri (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Senzor pentru uși/geamuri (montaj inclus)</h5>
+        <h5>Senzor pentru uși/geamuri (montare/configurare inclus)</h5>
         <p>Detectează deschiderea ușilor sau a ferestrelor și trimite alerte rapide.</p>
-        <span class="product-price">100 RON/buc</span>
-    </div>
-</div>
+        <span class="product-price">80 RON/buc</span>
+                    <button onclick="addToCart('Senzor pentru uși/geamuri', 80)">Adaugă în coș</button>
+                </div>
+            </div>
 
-<div class="product-item">
-    <img src="bariera.PNG" alt="Barieră IR (infraroșu)" class="product-image">
+            <div class="product-item">
+                <img src="bariera.PNG" alt="Barieră IR  (montare/configurare inclus)" class="product-image">
     <div class="product-info">
-        <h5>Barieră IR (infraroșu) (montaj și configurare)</h5>
+        <h5>Barieră IR (infraroșu) (montare/configurare inclus)</h5>
         <p>Oferă protecție perimetrală detectând orice mișcare în spațiul desemnat.</p>
         <span class="product-price">600 RON</span>
-    </div>
-</div>
+                    <button onclick="addToCart('Barieră IR (infraroșu)', 600)">Adaugă în coș</button>
+                </div>
+            </div>
+            
             <div class="product-item">
-                <img src="zvave.PNG" alt="Hub de automatizare Z-Wave" class="product-image">
+                 <img src="zvave.PNG" alt="Hub de automatizare Z-Wave (montare/configurare inclus)" class="product-image">
                 <div class="product-info">
-                    <h5>Hub de automatizare Z-Wave (montaj și configurare)</h5>
+                    <h5>Hub de automatizare Z-Wave (montare/configurare inclus)</h5>
                     <p>Integrați toate dispozitivele smart într-un singur hub de automatizare Z-Wave.</p>
                     <span class="product-price">850 RON</span>
+                    <button onclick="addToCart('Hub de automatizare Z-Wave', 850)">Adaugă în coș</button>
+                </div>
+            </div>
+        
+
+            <div class="product-item">
+                <img src="poarta.PNG" alt="Automatizare poarta auto\garaj (montare/configurare inclus)" class="product-image">
+                <div class="product-info">
+                    <h5>Automatizare poarta (montare/configurare inclus)</h5>
+                    <p>Deschide poarta in 2 moduri, cu telecomanda sau prin smartphone.</p>
+                    <span class="product-price">1800 RON</span>
+                    <button onclick="addToCart('Automatizare poarta', 1800)">Adaugă în coș</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="Captură.PNG" alt="Iluminat inteligent (montare/configurare inclus)" class="product-image">
+                <div class="product-info">
+                    <h5>Iluminat inteligent (montare/configurare inclus)</h5>
+                    <p>Aprinde/stinge iluminatul de oriunde, sau creaza scenarii prin care se aprinde/stinge in functie de prezenta, perioada zilei, etc.</p>
+                    <span class="product-price">80 RON</span>
+                    <button onclick="addToCart('Iluminat inteligent', 80)">Adaugă în coș</button>
                 </div>
             </div>
         </div>
-
-        </div>
-
-        <h4>Costuri suplimentare: Manoperă fără dispozitive</h4>
-        <ul>
-            <li><b>Manoperă pentru iluminat inteligent:</b> Instalare bec, bandă LED sau întrerupător - 50 RON/buc</li>
-            <li><b>Manoperă pentru termostate inteligente:</b> Instalare termostat și configurare - 300 RON/termostat</li>
-            <li><b>Manoperă pentru sisteme de securitate:</b> Cameră de supraveghere - 200 RON/buc; Senzori de securitate (fum, gaz, prezență) - 50 RON/buc</li>
-            <li><b>Manoperă pentru accesorii inteligente:</b> Senzori temperatură, inundație, uși - 50 RON/buc; Priză inteligentă - 70 RON/buc</li>
-        </ul>
-
-
-        <p><b>Produsele afișate reprezintă doar o selecție din gama noastră de soluții inteligente pentru casă. Pentru a configura un sistem care să răspundă perfect nevoilor și preferințelor dumneavoastră, vă invităm să ne contactați! Echipa noastră vă stă la dispoziție pentru consultanță și soluții personalizate!</b></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Casa Ta Inteligentă</p>
-        <p>Toate drepturile rezervate.</p>
-        <p><a href="politica_privacy.html">Politica de confidențialitate</a></p>
+        <p>&copy; 2025 Casa Ta Inteligentă. Toate drepturile rezervate.</p>
     </footer>
+
+    <div class="cart-container" id="cart-container">
+        <h4>Coșul tău</h4>
+        <ul id="cart-items"></ul>
+        <button class="close-btn" onclick="toggleCart()">Închide</button>
+        <button class="confirm-order-btn" onclick="confirmOrder()">Confirmă comanda</button>
+    </div>
+
+    <div class="notification" id="notification">
+        Produsul a fost adăugat în coș!
+    </div>
+
+    <script>
+        var cart = [];
+        var cartContainer = document.getElementById('cart-container');
+        var cartItems = document.getElementById('cart-items');
+        var notification = document.getElementById('notification');
+        
+        function toggleCart() {
+            if (cartContainer.style.display === 'block') {
+                cartContainer.style.display = 'none';
+            } else {
+                cartContainer.style.display = 'block';
+            }
+        }
+
+        function addToCart(productName, productPrice) {
+            cart.push({ name: productName, price: productPrice });
+            updateCart();
+            showNotification();
+        }
+
+        function updateCart() {
+            cartItems.innerHTML = '';
+            var total = 0;
+            cart.forEach(function(item) {
+                var listItem = document.createElement('li');
+                listItem.textContent = item.name + ' - ' + item.price + ' RON';
+                cartItems.appendChild(listItem);
+                total += item.price;
+            });
+
+            var totalItem = document.createElement('li');
+            totalItem.textContent = 'Total: ' + total + ' RON';
+            cartItems.appendChild(totalItem);
+        }
+
+        function showNotification() {
+            notification.classList.add('show');
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        function confirmOrder() {
+            var orderDetails = 'Produse comandate:\n';
+            var total = 0;
+            cart.forEach(function(item) {
+                orderDetails += item.name + ' - ' + item.price + ' RON\n';
+                total += item.price;
+            });
+            orderDetails += 'Total: ' + total + ' RON';
+
+            var phoneNumber = '+40775602083';
+            var message = encodeURIComponent(orderDetails);
+            var url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            window.open(url, '_blank');
+            cart = [];
+            updateCart();
+            toggleCart();
+        }
+    </script>
 </body>
 </html>
